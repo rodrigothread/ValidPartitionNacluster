@@ -82,9 +82,9 @@ public class ValidPartitionNacluster extends Configured implements Tool {
              }else
              if (partition.equals("p_3")) {
              return 3 % numReduceTasks;
-             }
+             }else
              
-            return 0% numReduceTasks;
+            return 0;
             
 
         }
