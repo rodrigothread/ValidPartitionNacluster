@@ -69,9 +69,9 @@ public class ValidPartitionNacluster extends Configured implements Tool {
            // String localidade = partition[0];
             //int ageInt = Integer.parseInt(localidade);
 
-            //this is done to avoid performing mod with 0
-            if (partition == "p_0") {
-             return 0;
+   
+                if (partition.equals("p_0")) {
+             return 0 % numReduceTasks;
              }else
              //if the age is <20, assign partition 0
              if (partition.equals("p_1")) {
